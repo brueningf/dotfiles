@@ -18,3 +18,6 @@ vim.keymap.set("n", "<leader>p", "\"_dP")
 
 -- execute it
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- give me work
+vim.keymap.set("n","<C-f>", "<cmd>!tmux neww sessionizer<CR>", { silent = true })
