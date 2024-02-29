@@ -1,6 +1,8 @@
 ### EXPORT
+VIM="nvim"
 export TERM="xterm-256color"                      # getting proper colors
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export GIT_EDITOR=$VIM
 
 ### SET MANPAGER
 ### Uncomment only one of these!
@@ -198,6 +200,10 @@ alias config="/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME"
 
 # termbin
 alias tb="nc termbin.com 9999"
+
+# sessionizer
+# Where should I put you?
+bindkey -s ^f "sessionizer\n"
 
 source "$HOME/.bittensor/zsh_autocompletion"
 

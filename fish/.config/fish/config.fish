@@ -7,21 +7,23 @@
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.cargo/bin /usr/lib/jvm/java-19-openjdk/bin $HOME/.local/bin $HOME/Applications $HOME/.config/composer/vendor/bin $fish_user_paths
 
+set VIM "nvim"
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
 set TERM "xterm-256color"                         # Sets the terminal type
+set GIT_EDITOR $VIM
 
 ### SET MANPAGER
 ### Uncomment only one of these!
 
 ### "bat" as manpager
-set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
 
 ### "vim" as manpager
 # set -x MANPAGER '/bin/bash -c "vim -MRn -c \"set buftype=nofile showtabline=0 ft=man ts=8 nomod nolist norelativenumber nonu noma\" -c \"normal L\" -c \"nmap q :qa<CR>\"</dev/tty <(col -b)"'
 
 ### "nvim" as manpager
-# set -x MANPAGER "nvim -c 'set ft=man' -"
+set -x MANPAGER "nvim -c 'set ft=man' -"
 
 ### SET EITHER DEFAULT EMACS MODE OR VI MODE ###
 function fish_user_key_bindings
@@ -124,9 +126,17 @@ function __history_previous_command_arguments
 end
 # The bindings for !! and !$
 if [ "$fish_key_bindings" = "fish_vi_key_bindings" ];
+
+  # Where should I put you?
+  # tmux session helper
+  bind -s -Minsert \cf "sessionizer"
+
   bind -Minsert ! __history_previous_command
   bind -Minsert '$' __history_previous_command_arguments
 else
+  # tmux session helper
+  bind -s \cf "sessionizer"
+
   bind ! __history_previous_command
   bind '$' __history_previous_command_arguments
 end
@@ -327,6 +337,7 @@ alias tips="lbrynet txo spend --type=support --is_not_my_input --blocking"
 
 # Mocp must be launched with bash instead of Fish!
 alias mocp="bash -c mocp"
+
 
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
