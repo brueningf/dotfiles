@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 #
 if [[ -z $STOW_FOLDERS ]]; then
-    STOW_FOLDERS="nvim,zsh"
+    STOW_FOLDERS="bin,nvim,fish,zsh"
 fi
 
 if [[ -z $DOTFILES ]]; then
@@ -9,13 +9,4 @@ if [[ -z $DOTFILES ]]; then
 fi
 
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
-
-pushd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
-do
-    echo "stow $folder"
-    stow -D $folder
-    stow $folder
-done
-popd
 
