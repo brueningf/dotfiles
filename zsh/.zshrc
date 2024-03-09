@@ -209,6 +209,12 @@ alias tb="nc termbin.com 9999"
 # Where should I put you?
 bindkey -s ^f "sessionizer\n"
 
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+
+#btcli
 source "$HOME/.bittensor/zsh_autocompletion"
 
 ### RANDOM COLOR SCRIPT ###
