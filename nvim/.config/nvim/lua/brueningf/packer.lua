@@ -46,4 +46,7 @@ return require('packer').startup(function(use)
 		  {'L3MON4D3/LuaSnip'},
 	  }
   }
+
+  use("folke/zen-mode.nvim")
+  use("github/copilot.vim")
 end)
