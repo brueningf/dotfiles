@@ -349,3 +349,5 @@ set NODE_OPTIONS "--openssl-legacy-provider"
 pyenv init - | source
 ### SETTING THE STARSHIP PROMPT ###
 starship init fish | source
+
+fish_add_path -a /home/fb/.foundry/bin
