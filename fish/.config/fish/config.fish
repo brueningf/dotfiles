@@ -351,3 +351,8 @@ pyenv init - | source
 starship init fish | source
 
 fish_add_path -a /home/fb/.foundry/bin
+fish_add_path -a /opt/cuda/bin
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
