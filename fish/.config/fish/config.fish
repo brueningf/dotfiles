@@ -5,7 +5,7 @@
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
-set -U fish_user_paths $HOME/.cargo/bin /usr/lib/jvm/java-19-openjdk/bin $HOME/.local/bin $HOME/Applications $HOME/.config/composer/vendor/bin $fish_user_paths
+set -U fish_user_paths $HOME/.cargo/bin /usr/lib/jvm/java-19-openjdk/bin $HOME/.local/bin $HOME/Applications $HOME/.config/composer/vendor/bin /usr/bin/flatpak $fish_user_paths
 
 set VIM "nvim"
 ### EXPORT ###
