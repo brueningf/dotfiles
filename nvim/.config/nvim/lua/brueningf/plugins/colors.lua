@@ -38,9 +38,9 @@ return {
                 disable_background = true,
             })
 
-            vim.cmd("colorscheme rose-pine")
+            vim.cmd("colorscheme rose-pine-moon")
 
-            ColorMyPencils()
+            ColorMyPencils("rose-pine-moon")
         end
     },
 
