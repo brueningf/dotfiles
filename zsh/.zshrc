@@ -214,8 +214,10 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
-#btcli
-source "$HOME/.bittensor/zsh_autocompletion"
+# BTCLI
+if [ -f "$HOME/.bittensor/zsh_autocompletion" ]; then
+    source "$HOME/.bittensor/zsh_autocompletion"
+fi
 
 ### RANDOM COLOR SCRIPT ###
 # Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
