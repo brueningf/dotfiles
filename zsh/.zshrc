@@ -219,18 +219,12 @@ if [ -f "$HOME/.bittensor/zsh_autocompletion" ]; then
     source "$HOME/.bittensor/zsh_autocompletion"
 fi
 
-### RANDOM COLOR SCRIPT ###
-# Get this script from my GitLab: gitlab.com/dwt1/shell-color-scripts
-# Or install it from the Arch User Repository: shell-color-scripts
-colorscript random
-
 ### BASH INSULTER (works in zsh though) ###
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
 #
 ### Ohmyzsh Plugins ###
-#
 plugins = (
     git
     zsh-autosuggestions
