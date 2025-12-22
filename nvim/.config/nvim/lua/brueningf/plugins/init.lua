@@ -65,5 +65,6 @@ return {
     -- Not so important stuff
     { "nvim-tree/nvim-web-devicons", lazy = true },
 
-    { 'github/copilot.vim' }
+    { "github/copilot.vim" },
+
 }

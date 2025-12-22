@@ -356,3 +356,20 @@ fish_add_path -a /opt/cuda/bin
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/fb/miniconda3/bin/conda
+    eval /home/fb/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/fb/miniconda3/etc/fish/conf.d/conda.fish"
+        . "/home/fb/miniconda3/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/fb/miniconda3/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+
+
+# opencode
+fish_add_path /home/fb/.opencode/bin
