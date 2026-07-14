@@ -20,9 +20,6 @@ return {
 
     { 'nvim-orgmode/orgmode',      opts = {} },
 
-    -- Treesitter
-    { 'nvim-treesitter/playground' },
-
     -- Harpoon
     {
         'ThePrimeagen/harpoon',
